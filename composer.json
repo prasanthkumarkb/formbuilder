@@ -1,0 +1,30 @@
+{
+    "name": "prasanth/form-builder",
+    "description": "Dynamic Form Builder Package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Prasanth Kumar"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Prasanth\\FormBuilder\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Prasanth\\FormBuilder\\FormBuilderServiceProvider"
+            ]
+        }
+    },
+
+   "require": {
+    "php": "^8.2",
+    "illuminate/support": "^10.0|^11.0|^12.0"
+    }
+}
