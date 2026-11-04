@@ -16,7 +16,9 @@ A low-code Journey/Form Builder package for Laravel.
 ## Installation
 
 ```bash
-composer require prasanth/formbuilder
+
+composer require prasanth/form-builder
+
 ```
 
 ## Publish Assets
