@@ -1,6 +1,6 @@
 # Laravel Form Builder
 
-A low-code Journey/Form Builder package for Laravel.
+A low-code Journey/Form Builder package for Laravel that enables administrators to create dynamic multi-screen forms without writing code.
 
 ## Features
 
@@ -17,8 +17,13 @@ A low-code Journey/Form Builder package for Laravel.
 
 ```bash
 
-composer require prasanth/form-builder
+composer require prasanth/form-builder:dev-main --prefer-source
 
+```
+## Publish Config
+
+```bash
+php artisan vendor:publish --tag=formbuilder-config
 ```
 
 ## Publish Assets
@@ -27,11 +32,7 @@ composer require prasanth/form-builder
 php artisan vendor:publish --tag=formbuilder-assets
 ```
 
-## Publish Config
 
-```bash
-php artisan vendor:publish --tag=formbuilder-config
-```
 
 ## Run Migrations
 
@@ -44,6 +45,43 @@ php artisan migrate
 ```text
 /admin/forms
 ```
+
+## Updating Package
+
+After pushing changes to GitHub and updating Packagist:
+
+```bash
+composer clear-cache
+
+composer update prasanth/form-builder
+```
+
+Check installed version:
+
+```bash
+composer show prasanth/form-builder
+
+
+## Uninstall Package
+
+The package includes an uninstall command to remove Form Builder database tables.
+
+### Interactive
+
+```bash
+php artisan formbuilder:uninstall
+```
+
+### Force Mode
+
+```bash
+php artisan formbuilder:uninstall --force
+```
+
+Remove package:
+
+```bash
+composer remove prasanth/form-builder
 
 ## Requirements
 
