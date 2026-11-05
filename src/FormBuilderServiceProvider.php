@@ -41,5 +41,11 @@ class FormBuilderServiceProvider extends ServiceProvider
         config([
             'package_menus' => $menus,
         ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+            \Prasanth\FormBuilder\Console\Commands\UninstallFormBuilder::class,
+            ]);
+        }
     }
 }
